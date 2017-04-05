@@ -23,8 +23,8 @@ class Database
     {
         try {
             //TODO - email for access to ftp/server
-            self::$db = new PDO('mysql:host=localhost;dbname=filo', 'root', '');
-//            self::$db = new PDO('mysql:host=localhost;dbname=saddiqs1_db', 'saddiqs1', 'owls77sale');
+//            self::$db = new PDO('mysql:host=localhost;dbname=filo', 'root', '');
+            self::$db = new PDO('mysql:host=localhost;dbname=saddiqs1_db', 'saddiqs1', 'owls77sale');
             self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch(PDOException $e) {
             die("Database Connection Error: " . $e->getMessage());

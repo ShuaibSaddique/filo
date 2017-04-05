@@ -16,8 +16,9 @@
         public function addRequest($UserID, $ItemID, $Status, $Description) {
             $db = Database::getDB();
 
-            $query = "INSERT INTO `requests` ('UserID', 'ItemID', 'Status', 'Description')
+            $query = "INSERT INTO `requests` (`UserID`, `ItemID`, `Status`, `Description`)
             VALUES ($UserID, $ItemID, '$Status', '$Description')";
+
             $sql = $db->prepare($query);
             $sql->execute();
         }
